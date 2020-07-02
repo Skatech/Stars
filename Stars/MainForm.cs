@@ -73,5 +73,13 @@ namespace Stars
       m_stopwatch.Stop();
       m_performance = String.Format("{0} / {1}", beforeRefresh, m_stopwatch.ElapsedMilliseconds);
     }
+    
+    [STAThread]
+    private static void Main(string[] args)
+    {
+      Application.EnableVisualStyles();
+      Application.SetCompatibleTextRenderingDefault(false);
+      Application.Run(new MainForm());
+    }
   }
 }
