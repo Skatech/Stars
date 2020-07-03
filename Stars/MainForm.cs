@@ -65,9 +65,9 @@ namespace Stars
         m_stars[n].Draw(m_graphics);
       }
       
-      var beforeRefresh = m_stopwatch.ElapsedMilliseconds;
-      
       m_graphics.DrawString(m_performance, Font, Brushes.Red, 10, 10);
+      
+      var beforeRefresh = m_stopwatch.ElapsedMilliseconds;
       m_pictureBox.Refresh();
       
       m_stopwatch.Stop();
@@ -75,7 +75,7 @@ namespace Stars
     }
     
     [STAThread]
-    private static void Main(string[] args)
+    static void Main(string[] args)
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);

@@ -21,11 +21,11 @@ namespace Stars
     
     public void Draw(Graphics graphics)
     {
-      float w = graphics.VisibleClipBounds.Width, wh = w / 2;
-      float h =  graphics.VisibleClipBounds.Height, hh = h / 2;
-      float s = 0.5f + 0.0001f * w / Z, ss = s * 2f;
-      float x = X / Z * wh + wh;
-      float y = Y / Z * hh + hh;
+      float w = graphics.VisibleClipBounds.Width / 2f;
+      float h =  graphics.VisibleClipBounds.Height / 2f;
+      float s = 0.5f + 0.0002f * w / Z, ss = s * 2f;
+      float x = w + w * X / Z;
+      float y = h + h * Y / Z;
       graphics.FillEllipse(Brush, x - s, y - s, ss, ss);
     }
   }
